@@ -17,3 +17,14 @@ if (!function_exists('sanitize')) {
       return htmlspecialchars($string, ENT_QUOTES, 'UTF-8');
    }
 }
+
+if (!function_exists('asset')) {
+   function asset($path)
+   {
+      // Mengambil BASE_URL dari config/globals.php dan mengarahkannya ke folder public
+      $baseUrl = rtrim(BASE_URL, '/');
+      $path = ltrim($path, '/');
+
+      return $baseUrl . '/public/' . $path;
+   }
+}
