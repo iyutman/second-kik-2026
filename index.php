@@ -33,4 +33,5 @@ $data = [
 
 // 7. Render View
 // Cara manggilnya sama persis memakai method run() atau render()
-echo $blade->run('home', $data);
+// echo $blade->run('home', $data);
+echo $blade->run('login', $data);
